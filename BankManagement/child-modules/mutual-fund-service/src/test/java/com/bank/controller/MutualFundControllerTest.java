@@ -17,7 +17,7 @@ public class MutualFundControllerTest {
 	
 	@Test
 	public void searchMutualFundTest() {
-		ResponseEntity<ServiceResponse<List<MutualFundMeta>>> searchMutualFund = mutualFundController.searchMutualFund();
+		ResponseEntity<ServiceResponse<List<MutualFundMeta>>> searchMutualFund = mutualFundController.searchMutualFund(null);
 	}
 
 }
