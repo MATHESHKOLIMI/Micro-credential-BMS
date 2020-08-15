@@ -13,8 +13,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class ExceptionHandling extends ResponseEntityExceptionHandler{
 	@ExceptionHandler(value = CustomerNotFoundException.class)
-	public ResponseEntity<ErrorDetails> customerNotFoundException(CustomerNotFoundException exc,WebRequest request){
+	public ResponseEntity<Object> customerNotFoundException(CustomerNotFoundException exc,WebRequest request){
 		ErrorDetails errordetails=new ErrorDetails(new Date(), exc.getMessage(), request.getDescription(false));
-		return new ResponseEntity<>(errordetails,HttpStatus.NOT_FOUND);
+		return new ResponseEntity<Object>("CustomerNot found",HttpStatus.OK);
 	}
 }
