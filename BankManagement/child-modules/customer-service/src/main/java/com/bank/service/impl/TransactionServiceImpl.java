@@ -1,11 +1,8 @@
 package com.bank.service.impl;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bank.model.Transaction;
 import com.bank.repository.TransactionRepository;
 import com.bank.service.TransactionServiceInterface;
 
@@ -14,7 +11,7 @@ public class TransactionServiceImpl implements TransactionServiceInterface {
 
 	@Autowired
 	TransactionRepository repository;
-	
+	/*
 	@Override
 	public Transaction createTransaction(Transaction transaction) {
 		// TODO Auto-generated method stub
@@ -37,6 +34,6 @@ public class TransactionServiceImpl implements TransactionServiceInterface {
 	public List<Transaction> getAllTransactionByAccountNumber(String accountNo) {
 		// TODO Auto-generated method stub
 		return repository.findByAccountNo(accountNo);
-	}
+	}*/
 
 }

@@ -1,15 +1,9 @@
 package com.bank.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.bank.model.Customer;
-import com.bank.model.Transaction;
 import com.bank.repository.RegistrationRepository;
 import com.bank.repository.TransactionRepository;
 import com.bank.service.RegistrationServiceInterface;
@@ -27,7 +21,7 @@ public class RegistrationServiceImplementation implements RegistrationServiceInt
 	
 	@Autowired
 	TransactionServiceInterface transactionService;
-	
+	/*
 	@Override
 	public Customer createCustomer(Customer customer) {
 		// TODO Auto-generated method stub
@@ -74,6 +68,6 @@ public class RegistrationServiceImplementation implements RegistrationServiceInt
 			cus.setPassword(customer.getPassword());
 		return repository.save(cus);
 		}
-	}
+	}*/
 
 }

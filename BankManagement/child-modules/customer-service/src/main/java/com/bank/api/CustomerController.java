@@ -1,27 +1,12 @@
 package com.bank.api;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.bank.model.Customer;
-import com.bank.model.Transaction;
-import com.bank.service.RegistrationServiceInterface;
-import com.bank.service.TransactionServiceInterface;
 
 @RestController
 @RequestMapping(value = "/customer")
 public class CustomerController {
-
+/*
 	@Autowired
 	RegistrationServiceInterface register;
 	
@@ -75,5 +60,5 @@ public class CustomerController {
 	@GetMapping("/transactions/{accountId}")
 	public ResponseEntity<Transaction> getTransactionById(@PathVariable String accountId){
 		return new ResponseEntity<Transaction>(transaction.getTransactionById(accountId),HttpStatus.OK);
-	}
+	} */
 }
