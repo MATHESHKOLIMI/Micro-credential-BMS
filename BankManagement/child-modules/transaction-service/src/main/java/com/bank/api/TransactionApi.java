@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bank.config.BanksProperties;
-import com.bank.config.BanksProperties.Bank;
 import com.bank.handlers.ResponseHandlers;
+import com.bank.model.Bank;
 import com.bank.model.ServiceResponse;
 import com.bank.service.TransactionService;
 

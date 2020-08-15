@@ -9,8 +9,9 @@ import java.util.stream.Collectors;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import com.bank.model.Bank;
+
 import lombok.Data;
-import lombok.ToString;
 
 @Component
 @Data
@@ -18,17 +19,7 @@ import lombok.ToString;
 public class BanksProperties {
 	private List<Bank> banks = new ArrayList<>();
 	
-	@ToString
-	@Data
-	public static class Bank {
-		private String name;
-		private String host;
-		private Integer port;
-		
-		public String getFullUrl() {
-			return "http://" + this.getHost() + ":" + this.getPort() + "/" + this.getName().toLowerCase();
-		}
-	}
+	public static Bank bank;
 	
 	public List<String> getActiveBanks(){
 		return banks.stream()

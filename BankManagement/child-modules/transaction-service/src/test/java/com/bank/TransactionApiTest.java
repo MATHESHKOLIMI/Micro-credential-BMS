@@ -14,7 +14,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.bank.api.TransactionApi;
-import com.bank.config.BanksProperties.Bank;
+import com.bank.model.Bank;
 import com.bank.model.ServiceResponse;
 
 @RunWith(SpringRunner.class)
