@@ -23,8 +23,8 @@
 
 	<modules>
 		<module>discovery-service</module>
-		<module>child-modules</module>
 		<module>child-contracts</module>
+		<module>child-modules</module>
 	</modules>
 
 	<dependencies>

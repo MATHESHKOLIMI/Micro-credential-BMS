@@ -20,9 +20,7 @@
 		<module>customer-service</module>
 		<module>common-module</module>
 		<module>account-service</module>
-		<module>transaction-contract</module>
 		<module>transaction-service</module>
-		<module>mutual-fund-contract</module>
 		<module>mutual-fund-service</module>
 	</modules>
 
