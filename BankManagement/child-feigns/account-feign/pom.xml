@@ -6,29 +6,24 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>BankManagementSystem</groupId>
-		<artifactId>child-modules</artifactId>
+		<artifactId>child-feigns</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>account-service</artifactId>
-	<name>account-service</name>
+	<artifactId>account-feign</artifactId>
+	<name>account-feign</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
 			<groupId>BankManagementSystem</groupId>
-			<artifactId>account-contract</artifactId>
+			<artifactId>common-feign</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>BankManagementSystem</groupId>
-			<artifactId>account-feign</artifactId>
+			<artifactId>account-contract</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

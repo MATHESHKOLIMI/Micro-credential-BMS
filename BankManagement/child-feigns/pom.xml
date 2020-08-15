@@ -6,30 +6,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>BankManagementSystem</groupId>
-		<artifactId>child-modules</artifactId>
+		<artifactId>BankManagement</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>account-service</artifactId>
-	<name>account-service</name>
+	<artifactId>child-feigns</artifactId>
+	<packaging>pom</packaging>
+	<name>child-feigns</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+
+	<modules>
+		<module>common-feign</module>
+		<module>account-feign</module>
+	</modules>
+
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>BankManagementSystem</groupId>
-			<artifactId>account-contract</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>BankManagementSystem</groupId>
-			<artifactId>account-feign</artifactId>
+			<artifactId>common-module</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
 </project>
