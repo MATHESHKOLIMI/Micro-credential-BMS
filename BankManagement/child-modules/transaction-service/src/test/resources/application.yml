@@ -1,0 +1,23 @@
+active:
+   banks:
+      - name: HDFC
+        host: localhost
+        port: 1234
+      - name: Yes Bank
+        host: localhost
+        port: 1234
+      - name: SBI
+        host: localhost
+        port: 1234
+      - name: PNB
+        host: localhost
+        port: 1234
+      - name: Union Bank
+        host: localhost
+        port: 1234
+      - name: Vijaya Laxmi
+        host: localhost
+        port: 1234
+      - name: Bandhan
+        host: localhost
+        port: 1234
