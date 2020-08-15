@@ -24,6 +24,7 @@
 	<modules>
 		<module>discovery-service</module>
 		<module>child-modules</module>
+		<module>child-contracts</module>
 	</modules>
 
 	<dependencies>
@@ -69,7 +70,7 @@
 			<artifactId>aws-java-sdk</artifactId>
 			<version>1.11.841</version>
 		</dependency>
-
+		
 	</dependencies>
 	<build>
 		<pluginManagement>

@@ -9,17 +9,13 @@
 		<artifactId>child-modules</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>mutual-fund-service</artifactId>
-	<name>mutual-fund-service</name>
+	<artifactId>mutual-fund-contract</artifactId>
+	<name>mutual-fund-contract</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>BankManagementSystem</groupId>
-			<artifactId>transaction-contract</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+
 	</dependencies>
 </project>
