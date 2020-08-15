@@ -24,6 +24,7 @@
 	<modules>
 		<module>discovery-service</module>
 		<module>child-modules</module>
+		<module>gateway-service</module>
 	</modules>
 
 	<dependencies>
