@@ -12,10 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableEurekaClient
 @SpringBootApplication
 @ComponentScan(basePackages= {"com.bank"})
-public class App 
+public class MutualFundApp 
 {
 	public static void main( String[] args )
 	{
-		SpringApplication.run(App.class, args);
+		SpringApplication.run(MutualFundApp.class, args);
 	}
 }

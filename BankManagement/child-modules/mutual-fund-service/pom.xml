@@ -18,7 +18,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>BankManagementSystem</groupId>
-			<artifactId>transaction-contract</artifactId>
+			<artifactId>mutual-fund-contract</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>BankManagementSystem</groupId>
+			<artifactId>common-module</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
