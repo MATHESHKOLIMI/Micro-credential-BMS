@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>BankManagementSystem</groupId>
-  <artifactId>BankManagement</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <packaging>pom</packaging>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>BankManagementSystem</groupId>
+	<artifactId>BankManagement</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
 
 	<name>Bank-Management</name>
 	<url>http://maven.apache.org</url>
@@ -18,9 +20,12 @@
 		<artifactId>spring-cloud-starter-parent</artifactId>
 		<version>Hoxton.SR2</version>
 	</parent>
-
 	
-
+	<modules>
+		<module>discovery-service</module>
+		<module>child-modules</module>
+	</modules>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -32,17 +37,17 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
-		
-	 	<dependency>
+
+		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
 			<version>3.0</version>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
@@ -52,7 +57,7 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
@@ -78,4 +83,5 @@
 			</testResource>
 		</testResources>
 	</build>
-	</project>
+
+</project>
