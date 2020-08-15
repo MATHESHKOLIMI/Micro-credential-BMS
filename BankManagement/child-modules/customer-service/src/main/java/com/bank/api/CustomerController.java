@@ -1,11 +1,34 @@
 package com.bank.api;
 
+import java.util.Objects;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.bank.handlers.ResponseHandlers;
+import com.bank.model.Customer;
+import com.bank.model.ServiceResponse;
+import com.bank.service.ICustomerService;
 
 @RestController
 @RequestMapping(value = "/customer")
 public class CustomerController {
+	
+	@Autowired
+	private ICustomerService customerService;
+	
+	@PostMapping("/detail")
+	public ResponseEntity<ServiceResponse<Customer>> creeateCustomer(@RequestBody Customer customer){
+		customerService.createCustomer(customer);
+		return new ResponseHandlers<Customer>().defaultResponse(Customer.builder().build(),"Custer created successfully. Use PAN for login.", HttpStatus.CREATED);
+	}
+	
+	
 /*
 	@Autowired
 	RegistrationServiceInterface register;

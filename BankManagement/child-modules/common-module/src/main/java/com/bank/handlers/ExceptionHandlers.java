@@ -51,7 +51,8 @@ public class ExceptionHandlers   {
 			AsyncRequestTimeoutException.class,
 			IllegalArgumentException.class,
 			InvocationTargetException.class,
-			RestClientException.class
+			RestClientException.class,
+			RuntimeException.class
 		})
 	public ResponseEntity<Object> exception(Exception ex) {
 		BankException exception = BankException.builder()

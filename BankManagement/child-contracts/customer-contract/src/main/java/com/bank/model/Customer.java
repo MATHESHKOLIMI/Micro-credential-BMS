@@ -13,12 +13,13 @@ import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -35,8 +36,9 @@ public class Customer {
 	@Pattern(regexp = "[A-Z] {5}[0-9] {4}[A-z]")
 	@NotNull
 	private String customerPAN;
+	
 	@NotNull
-//	@DateTimeFormat(iso = ISO.DATE,pattern = "MM-DD-YYYY")
+//	@DateTimeFormat(iso = , pattern = "MM-DD-YYYY")
 	private Date dateOfBirth;
 	@Email
 	private String customerMail;
