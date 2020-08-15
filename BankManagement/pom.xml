@@ -20,12 +20,12 @@
 		<artifactId>spring-cloud-starter-parent</artifactId>
 		<version>Hoxton.SR2</version>
 	</parent>
-	
+
 	<modules>
 		<module>discovery-service</module>
 		<module>child-modules</module>
 	</modules>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -63,6 +63,13 @@
 			<artifactId>guava</artifactId>
 			<version>20.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>1.11.841</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<pluginManagement>
