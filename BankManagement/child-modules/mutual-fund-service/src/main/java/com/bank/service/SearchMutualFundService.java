@@ -2,6 +2,7 @@ package com.bank.service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -19,6 +20,7 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.bank.MutualFund;
 import com.bank.MutualFundMeta;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -35,6 +37,9 @@ public class SearchMutualFundService implements ISearchMutualFundService {
 	@Value("${mutual.fund.search.url}")
 	private String SEARCH_URL;
 	
+	@Value("${mutual.fund.detail.url}")
+	private String FETCH_DTLS_URL;
+	
 	@PostConstruct
 	void setUp() {
 		HttpHeaders headers = new HttpHeaders();
@@ -49,12 +54,22 @@ public class SearchMutualFundService implements ISearchMutualFundService {
 	
 	@Override
 	public List<MutualFundMeta> searchMutualFund(String query) {
-		List<MutualFundMeta> mutualFunds = null;
+		List<MutualFundMeta> mutualFunds = Collections.emptyList();
 		ResponseEntity<List<MutualFundMeta>> exchange = restTemplate.exchange(SEARCH_URL+query, HttpMethod.GET, entity, new ParameterizedTypeReference<List<MutualFundMeta>>() { });
 		if(exchange.getStatusCode().is2xxSuccessful()) {
 			mutualFunds = exchange.getBody();
 		}
 		return mutualFunds;
+	}
+
+	@Override
+	public MutualFund fetchMutaulFundDtls(String fund) {
+		MutualFund mutualFund = MutualFund.builder().build();
+		ResponseEntity<MutualFund> exchange = restTemplate.exchange(FETCH_DTLS_URL.replaceAll("<FUND_ID>", fund), HttpMethod.GET, entity, MutualFund.class);
+		if(exchange.getStatusCode().is2xxSuccessful()) {
+			mutualFund = exchange.getBody();
+		}
+		return mutualFund;
 	}
 	
 }

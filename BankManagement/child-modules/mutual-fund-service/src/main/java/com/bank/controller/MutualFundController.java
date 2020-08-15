@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.bank.MutualFund;
+import com.bank.MutualFundData;
 import com.bank.MutualFundMeta;
 import com.bank.handlers.ResponseHandlers;
 import com.bank.model.ServiceResponse;
@@ -28,4 +30,9 @@ public class MutualFundController {
 		return new ResponseHandlers<List<MutualFundMeta>>().defaultResponse(metas);
 	}
 
+	@RequestMapping(method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE, value="/details")
+	public ResponseEntity<ServiceResponse<MutualFund>> fetchMutaulFundDetails(@RequestParam("fund") String fund) {
+		MutualFund mutualFund = searchMutualFundService.fetchMutaulFundDtls(fund);
+		return new ResponseHandlers<MutualFund>().defaultResponse(mutualFund);
+	}
 }
