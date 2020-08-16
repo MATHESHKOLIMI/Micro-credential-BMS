@@ -7,7 +7,6 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bank.MutualFund;
 import com.bank.exception.BankException;
 import com.bank.feign.IAccountController;
 import com.bank.feign.IMutualFundController;
