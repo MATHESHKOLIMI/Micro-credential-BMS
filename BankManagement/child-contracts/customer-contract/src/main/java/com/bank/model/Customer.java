@@ -14,6 +14,8 @@ import javax.validation.constraints.Size;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.bank.CustomerMutualFund;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -53,4 +55,6 @@ public class Customer {
 	@NotNull
 	@Size(min =3,max = 40)
 	private String address;
+	
+	List<CustomerMutualFund> mutualfunds;
 }

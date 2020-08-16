@@ -10,4 +10,5 @@ import com.bank.model.Customer;
 @Repository
 public interface CustomerRepository extends MongoRepository<Customer, String>{
 	Optional<Customer> findFirstByCustomerPAN(String pan);
+	Optional<Customer> findByCustomerPAN(String pan);
 }

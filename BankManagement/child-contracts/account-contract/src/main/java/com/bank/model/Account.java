@@ -23,13 +23,19 @@ public class Account {
 	@Id
 	@NotNull
 	@Pattern(regexp = "[1-9][0-9] {9}")
-	String accountNo;
-	AccountType account;
+	private String accountNo;
+	private AccountType account;
 	@NotNull
 	@DateTimeFormat(iso = ISO.DATE_TIME)
-	Date dateOfOpening;
+	private Date dateOfOpening;
 	@NotNull
 	@Pattern(regexp = "[A-Z] {4}[0-9] {7}")
-	String branchIFSC;
-	List<Transaction> transaction;
+	private String branchIFSC;
+	
+	private List<Transaction> transaction;
+	
+	@NotNull
+	private String ownerId;
+	
+	private String bankName;
 }

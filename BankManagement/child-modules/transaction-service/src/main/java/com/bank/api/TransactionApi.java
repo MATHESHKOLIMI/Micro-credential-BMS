@@ -11,12 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bank.config.BanksProperties;
 import com.bank.handlers.ResponseHandlers;
+import com.bank.model.Account;
 import com.bank.model.Bank;
+import com.bank.model.Payment;
 import com.bank.model.ServiceResponse;
+import com.bank.model.Transaction;
 import com.bank.service.TransactionService;
 
+import cam.bank.ITransactionFeign;
+
 @RestController
-public class TransactionApi {
+public class TransactionApi implements ITransactionFeign {
 
 	@Autowired
 	BanksProperties banksProperties;
@@ -35,9 +40,9 @@ public class TransactionApi {
 		return new ResponseHandlers<List<Bank>>().defaultResponse(banksProperties.getBanks());
 	}
 	
-	/*@RequestMapping(value="/transaction", method=RequestMethod.POST, produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<ServiceResponse<Payment>> makeTransaction(@RequestBody Payment payment) {
-		Payment checkPayment = transactionService.checkPayment(payment);
-		return new ResponseHandlers<Payment>().defaultResponse(checkPayment);
-	}*/
+	@Override
+	public ResponseEntity<ServiceResponse<Transaction>> makeTransaction(Account account, String mutualFund) {
+		Payment payment = transactionService.checkPayment(account);
+		return new ResponseHandlers<Transaction>().defaultResponse(Transaction.builder().mutualFund(mutualFund).payment(payment).build(), "Purchase successful.");
+	}
 }

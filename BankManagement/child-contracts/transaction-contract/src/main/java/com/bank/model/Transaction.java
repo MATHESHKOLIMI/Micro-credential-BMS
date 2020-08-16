@@ -10,9 +10,11 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,4 +31,7 @@ public class Transaction {
 	@DateTimeFormat(iso = ISO.DATE_TIME)
 	@NotNull
 	Date dateOfTransaction;
+	
+	Payment payment;
+	String mutualFund;
 }

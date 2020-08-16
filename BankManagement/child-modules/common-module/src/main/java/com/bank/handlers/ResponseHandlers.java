@@ -39,6 +39,14 @@ public class ResponseHandlers<T> {
 		return new ResponseEntity<R>((R) responseModel, status);
 	}
 	
+	public <R> ResponseEntity<R> defaultResponse(String message, HttpStatus status){
+		ServiceResponse<T> responseModel = (ServiceResponse<T>) ServiceResponse.builder()
+																	.success(true)
+																	.additionalMessage(message)
+																	.build();
+		return new ResponseEntity<R>((R) responseModel, status);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public <R> ResponseEntity<ServiceResponse<R>> handleExceptions(BankException ex) {
 		ServiceResponse<T> responseModel = (ServiceResponse<T>) ServiceResponse.builder()

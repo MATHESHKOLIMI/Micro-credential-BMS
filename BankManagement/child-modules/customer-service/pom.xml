@@ -34,5 +34,20 @@
 			<artifactId>customer-contract</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>BankManagementSystem</groupId>
+			<artifactId>account-feign</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>BankManagementSystem</groupId>
+			<artifactId>mutual-fund-feign</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>BankManagementSystem</groupId>
+			<artifactId>transaction-feign</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
