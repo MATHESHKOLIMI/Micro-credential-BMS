@@ -1,30 +1,19 @@
 package com.bank.controller;
 
-import java.util.List;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.http.ResponseEntity;
 
-import com.bank.MutualFundMeta;
-import com.bank.model.ServiceResponse;
-
-import junit.framework.Assert;
-
-@RunWith(MockitoJUnitRunner.class)
 public class MutualFundControllerTest {
 
-	private MutualFundController mutualFundController;
-
-
-	@Test public void searchMutualFundTest() {
-		Assert.assertTrue(true);
-		/*
-		 * ResponseEntity<ServiceResponse<List<MutualFundMeta>>> searchMutualFund =
-		 * mutualFundController.searchMutualFund(null);
-		 */
+	@Test
+	public void testSearchMutualFund() {
+		fail("Not yet implemented");
 	}
 
+	@Test
+	public void testFetchMutaulFundDetails() {
+		fail("Not yet implemented");
+	}
 
 }

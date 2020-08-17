@@ -27,6 +27,7 @@
 		<module>child-contracts</module>
 		<module>child-modules</module>
 		<module>child-feigns</module>
+		<module>gateway-service</module>
 	</modules>
 
 	<dependencies>
