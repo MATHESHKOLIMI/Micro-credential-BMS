@@ -14,7 +14,7 @@ import com.bank.model.ServiceResponse;
 import com.bank.service.ISearchMutualFundService;
 
 @RestController
-@RequestMapping(value="mutual-fund")
+@RequestMapping("/mutual-fund")
 public class MutualFundController {
 
 	@Autowired

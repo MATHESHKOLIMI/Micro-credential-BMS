@@ -14,24 +14,26 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
+
+
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Transaction {
 	@Id
 	@NotNull
 	@Pattern(regexp = "[1-9] {1}[0-9] {12}")
-	String transactionId;
-	String accountNo;
-	String toAccount;
-	Status statusOfTransaction;
-	double amount;
-	String transactionDetails;
+	private String transactionId;
+	private String accountNo;
+	private String toAccount;
+	private Status statusOfTransaction;
+	private double amount;
+	private String transactionDetails;
 	@DateTimeFormat(iso = ISO.DATE_TIME)
 	@NotNull
-	Date dateOfTransaction;
+	private Date dateOfTransaction;
 	
-	Payment payment;
-	String mutualFund;
+	private Payment payment;
+	private String mutualFund;
 }
