@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Configuration;
 import feign.Contract;
 
 @Configuration
-@ComponentScan(basePackages="com.bus")
 public class FeignConfig {
 	@Bean
 	public Contract feignContract() {

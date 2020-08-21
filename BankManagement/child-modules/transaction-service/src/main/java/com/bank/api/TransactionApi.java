@@ -18,7 +18,7 @@ import com.bank.model.ServiceResponse;
 import com.bank.model.Transaction;
 import com.bank.service.TransactionService;
 
-import cam.bank.ITransactionFeign;
+import cam.bank.feign.ITransactionFeign;
 
 @RestController
 public class TransactionApi implements ITransactionFeign {

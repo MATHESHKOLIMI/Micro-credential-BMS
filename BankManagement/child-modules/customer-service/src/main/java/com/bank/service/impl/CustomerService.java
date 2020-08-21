@@ -16,7 +16,7 @@ import com.bank.model.Transaction;
 import com.bank.repository.CustomerRepository;
 import com.bank.service.ICustomerService;
 
-import cam.bank.ITransactionFeign;
+import cam.bank.feign.ITransactionFeign;
 
 @Service
 public class CustomerService implements ICustomerService {
@@ -48,6 +48,7 @@ public class CustomerService implements ICustomerService {
 
 	}
 
+	@Override
 	public void addAccount(Account account) {
 		if(accountFeign.countAccount(account.getOwnerId()).getBody().getData()<4) {
 			accountFeign.addAccount(account);

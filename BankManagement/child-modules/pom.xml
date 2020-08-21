@@ -22,8 +22,10 @@
 		<module>account-service</module>
 		<module>transaction-service</module>
 		<module>mutual-fund-service</module>
+		<module>login-service</module>
+		<module>cloud-config-service</module>
+		<module>customer-service-module</module>
 	</modules>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,6 +35,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

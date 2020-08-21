@@ -19,7 +19,7 @@ import com.bank.model.ServiceResponse;
 import com.bank.service.ICustomerService;
 
 @RestController
-@RequestMapping(value = "/customer")
+@RequestMapping(value = "/account")
 public class CustomerController {
 	
 	@Autowired
@@ -28,7 +28,7 @@ public class CustomerController {
 	@PostMapping(produces=MediaType.APPLICATION_JSON_VALUE, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ServiceResponse<Customer>> createCustomer(@RequestBody Customer customer){
 		customerService.createCustomer(customer);
-		return new ResponseHandlers<String>().defaultResponse("Custer created successfully. Use PAN for login.", HttpStatus.CREATED);
+		return new ResponseHandlers<String>().defaultResponse("Customer created successfully. Use PAN for login.", HttpStatus.CREATED);
 	}
 	
 	@PostMapping("/account")
@@ -41,7 +41,7 @@ public class CustomerController {
 		return new ResponseHandlers<Customer>().defaultResponse(customerService.getCustomer(pan),"Custer created successfully. Use PAN for login.", HttpStatus.CREATED);
 	}
 	
-	@PostMapping("purchase")
+	@PostMapping(value = "/purchase")
 	public ResponseEntity<ServiceResponse<String>> purchaseMutualFund(@RequestHeader("pan") String pan, @RequestHeader("accountId") String accountId, @RequestHeader("mutualFundId") String mutualFundId){
 		
 		return new ResponseHandlers<String>().defaultResponse("Account Added Successfully.", HttpStatus.CREATED);
