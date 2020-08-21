@@ -8,8 +8,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 import com.bank.service.AccountService;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 @SpringBootApplication
 @EnableEurekaClient
+@EnableSwagger2
 public class AccountServiceApp 
 {
 	public static final Logger logger=LoggerFactory.getLogger(AccountService.class);

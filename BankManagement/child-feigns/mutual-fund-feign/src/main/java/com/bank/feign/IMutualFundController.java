@@ -14,8 +14,7 @@ import com.bank.MutualFund;
 import com.bank.MutualFundMeta;
 import com.bank.model.ServiceResponse;
 
-@FeignClient
-@RestController
+@FeignClient(value = "mutualfundservice")
 public interface IMutualFundController {
 	@RequestMapping(method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<ServiceResponse<List<MutualFundMeta>>> searchMutualFund(@RequestParam("query") String query);
