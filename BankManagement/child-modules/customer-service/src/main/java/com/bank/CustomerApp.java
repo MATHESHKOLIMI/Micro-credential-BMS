@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages= {"com.bank"})
+@ComponentScan(basePackages= {"com.bank.feign"})
 public class CustomerApp 
 {
     public static void main( String[] args )
